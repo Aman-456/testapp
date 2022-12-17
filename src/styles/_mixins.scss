@@ -1,0 +1,102 @@
+@use "./variables" as *;
+
+@mixin transition3() {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@mixin transition1() {
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+@mixin transition5() {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@mixin transitionY($val: -50%) {
+  -webkit-transform: translateY($val);
+  -ms-transform: translateY($val);
+  -o-transform: translateY($val);
+  transform: translateY($val);
+}
+
+@mixin transitionY3() {
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+}
+
+@mixin transitionY0() {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+@mixin flexItem($justify, $align, $dir, $gap) {
+  display: flex;
+  @if ($justify) {
+    justify-content: $justify;
+  }
+  @if ($align) {
+    align-items: $align;
+  }
+  @if ($dir) {
+    flex-direction: $dir;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@mixin flexItemImp($justify, $align, $dir, $gap) {
+  display: flex !important;
+  @if ($justify) {
+    justify-content: $justify !important;
+  }
+  @if ($align) {
+    align-items: $align !important;
+  }
+  @if ($dir) {
+    flex-direction: $dir !important;
+  }
+  @if ($gap) {
+    gap: $gap !important;
+  }
+}
+
+@mixin absolute($bottom: null) {
+  content: "";
+  position: absolute;
+  bottom: $bottom;
+  left: 0;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop-width) {
+    @content;
+  }
+}

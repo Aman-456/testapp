@@ -1,0 +1,15 @@
+.mdDisplay {
+  display: none !important;
+}
+.colorPrimary {
+  color: var(--primary) !important;
+}
+
+@include tablet() {
+  .mdNone {
+    display: none;
+  }
+  .mdDisplay {
+    display: block !important;
+  }
+}

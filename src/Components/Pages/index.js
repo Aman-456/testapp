@@ -1,0 +1,6 @@
+export { default as LoginComponent } from "./Login"
+export { default as SignupComponent } from "./Signup"
+export { default as HomeComponent } from "./Home"
+export { default as AboutComponent } from "./About"
+export { default as ContactComponent } from "./Contact"
+export { default as ProfileComponent } from "./Profile"

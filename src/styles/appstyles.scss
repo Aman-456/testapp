@@ -1,0 +1,76 @@
+@import "./mixins";
+@import "./variables";
+@import "./utils.scss";
+@import "./Layout.scss";
+@import "./colorschanges.scss";
+
+body {
+  width: 100% !important;
+  overflow: unset !important;
+  // color: var(--textLighter);
+}
+.SearchBar {
+  padding: 7px 5px;
+  max-width: 400px;
+  gap: 0.5rem;
+  margin-right: 4rem;
+  @include tablet() {
+    margin-right: 0;
+  }
+  input {
+    &::placeholder {
+      font-weight: 550;
+    }
+  }
+}
+
+// login
+.login-form {
+  border-radius: 1rem;
+  padding: 2.8% 2.5% 10% 2.5%;
+  height: 85vh;
+  min-height: 500px;
+  max-width: 400px;
+
+  .flex-between .ant-form-item-control-input-content {
+    @include flexItem(space-between, "", "", "");
+  }
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+  label,
+  .login-form-forgot {
+    color: var(--textLighter) !important;
+    font-size: smaller !important;
+    font-weight: 500;
+  }
+  .login-form-forgot {
+    color: unset !important;
+  }
+}
+.button {
+  border-radius: 10px;
+  width: 70%;
+  height: 45px;
+  font-size: 16px;
+}
+.text500 {
+  font-weight: 500;
+}
+.InvalidButton {
+  background-color: var(--buttonInvalid);
+  &:hover {
+    background-color: var(--buttonInvalid) !important;
+  }
+}
+.logoWrapper {
+  @include flexItem(flex-start, center, row, 1rem);
+  width: 100%;
+  span {
+    min-width: 1px;
+    height: 25px;
+  }
+  .logo {
+    max-width: 50px;
+  }
+}
