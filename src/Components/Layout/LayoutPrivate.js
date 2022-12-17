@@ -98,7 +98,8 @@ const LayoutPrivate = () => {
                     background: colorBgContainer,
                     height: "100%"
                 }}
-
+                defaultCollapsed={true}
+                defaultChecked={false}
                 theme='light'
 
                 collapsible={true}
