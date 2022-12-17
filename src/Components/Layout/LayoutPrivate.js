@@ -16,7 +16,7 @@ import { direction } from '../../store/Features/languageSlice';
 import DrawerWrapper from './Drawer';
 import { setTheme, Theme } from '../../store/Features/themeSlice';
 import { setProfile } from '../../store/Features/ProfileSlice';
-import { useTranslation } from "react-i18next"
+// import { useTranslation } from "react-i18next"
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -30,7 +30,7 @@ function getItem(label, key, icon, onClick) {
 }
 
 const LayoutPrivate = () => {
-    const { i18n, t } = useTranslation()
+    // const { i18n, t } = useTranslation()
     const THEME = useSelector(Theme)
     const dispatch = useDispatch()
     const [collapsed, setCollapsed] = useState(false);
@@ -39,9 +39,9 @@ const LayoutPrivate = () => {
     const navigate = useNavigate()
 
 
-    const handlechangelang = (lang) => {
-        // i18n.changeLanguage(lang)
-    }
+    // const handlechangelang = (lang) => {
+    //     // i18n.changeLanguage(lang)
+    // }
 
     const items = [
         getItem(

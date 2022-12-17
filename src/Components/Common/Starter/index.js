@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { load, PROFILE, setProfile, unload } from '../../../store/Features/ProfileSlice'
-import { setTheme, Theme } from '../../../store/Features/themeSlice'
+// import { setTheme, Theme } from '../../../store/Features/themeSlice'
 
 function Starter() {
     const disptach = useDispatch()
